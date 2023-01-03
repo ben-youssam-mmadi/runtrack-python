@@ -6,14 +6,14 @@ def ft_is_triangle(a, b, c):
     elif a + b > c and a + c > b and b + c > a:
         print("Il est possible de construire un triangle")
 
-        if a == b or b == c or c == a :
+        if (a == b or b == c or c == a) and ( a * a + b * b == c * c or b * b + c * c == a * a or a * a + c * c == b * b):
+            print("Ce triangle sera rectangle isocele")
+
+        elif a == b or b == c or c == a :
             print("Ce triangle sera isocèles")
 
         elif a * a + b * b == c * c or b * b + c * c == a * a or a * a + c * c == b * b:
             print("Ce triangle sera rectangle")
-            
+
         else:
             print("Ce triangle sera quelconque")
-
-
-ft_is_triangle(5, 4, 3)
